@@ -53,7 +53,11 @@ body {
     background-color: black;
     color: white;
     border: white solid 1px;
-}
+} 
+
+.flavor_text>button.preview_btn {
+    margin-top: 24px; /* This creates the space between the buttons */
+} /* added from chatGPT */
 
 .bio {
     height: 800px;
