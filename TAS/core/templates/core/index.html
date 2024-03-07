@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Africa Story</title>
+    <script src="{% static 'js/download.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
+
 <body>
+  {% include 'core/messages.html' %}
    <!---the content div will contain three rows
       the first row will have the background become a carecel
      of the front the back and a picture of the africa story logo
@@ -25,13 +28,17 @@
         <!----a dive for the image and one for the text-->
          <div class="flavor_text">
           <p>This isn't just based on a true story. It is a true story.</p>
-          <button class="preview_btn" onclick="window.open('/static/preview/TheAfricaStory_preview_pdf.pdf')">READ PREVIEW</a></button>
+    {% if payment_complete %}
+  <button onclick="downloadEbook()">Download eBook</button>
+    {% endif %}
+          <button class="preview_btn" onclick="downloadPreview()">READ PREVIEW</a></button>
 
          <button> <a href="https://store.bookbaby.com/book/the-africa-story" target="_blank" >BUY NOW</a></button>
 
          </div>
 
       </div>
+
 
     <div class="bio">
       <div class="img_div">
@@ -50,27 +57,41 @@
     </div>
 
     <div class="ebook_download">
-      <h2>Future titles Coming Soon</h2>
+      <h2>Buy The E-Book (Save over 35% and read instantly!)</h2>
       <div class="links">
-      
-          <div class="center">
-            <img class="download_img" src="{% static 'photos/jungle.png'%}" alt="jungle_ai_art">
-            <p>Echoes of the Untamed Wild</p>
-          </div>
-        
 
-        
-          <div class="center">
-            <img class="download_img" src="{% static 'photos/snow.png'%}" alt="snow_ai_art">
-            <p>The Crystal Shard of Eldoria</p>
-          </div>
-      
+ <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
 
-        
-          <div class="center">
-            <img class="download_img" src="{% static 'photos/volcano.png'%}">
-            <p>Guardians of the Fire Isles</p>
-          </div>
+<stripe-buy-button
+  buy-button-id="buy_btn_1OqiqbDDOxcvEJL1syxulXcW"
+  publishable-key="pk_test_51OqgatDDOxcvEJL1SMlPBBeEgQ5eLRia0FjcyN9Q0zKcUlYCpQ7NLKabCXqFl9rWtmQMBGEVKvZBhAxdRJYnh7Oc00liA9uG4H"
+>
+</stripe-buy-button>
+
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1OrY5BDDOxcvEJL1rBByt4rr"
+  publishable-key="pk_test_51OqgatDDOxcvEJL1SMlPBBeEgQ5eLRia0FjcyN9Q0zKcUlYCpQ7NLKabCXqFl9rWtmQMBGEVKvZBhAxdRJYnh7Oc00liA9uG4H"
+>
+</stripe-buy-button> 
+
+<script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1OrYwlDDOxcvEJL1hHHJGIBM"
+  publishable-key="pk_test_51OqgatDDOxcvEJL1SMlPBBeEgQ5eLRia0FjcyN9Q0zKcUlYCpQ7NLKabCXqFl9rWtmQMBGEVKvZBhAxdRJYnh7Oc00liA9uG4H"
+>
+</stripe-buy-button>
+
+
+
        
       </div>
       
