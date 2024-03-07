@@ -74,3 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(textSection); // Start observing the text container
 });
+
+
+
+

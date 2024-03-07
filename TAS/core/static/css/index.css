@@ -346,4 +346,29 @@ a {
 
 .link {
     color: white;
+} 
+
+.message {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.message.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.message.info {
+  background-color: #2196F3;
+  color: white;
+}
+
+.message.warning {
+  background-color: #FF9800;
+  color: white;
+}
+
+.message.error {
+  background-color: #F44336;
+  color: white;
 }
