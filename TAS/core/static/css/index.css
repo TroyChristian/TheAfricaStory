@@ -52,12 +52,28 @@ body {
     height: 80px;
     background-color: black;
     color: white;
-    border: white solid 1px;
+    border: white solid 2px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Additional styling for aesthetics */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 } 
+
+
 
 .flavor_text>button.preview_btn {
     margin-top: 24px; /* This creates the space between the buttons */
-} /* added from chatGPT */
+} /* added from chatGPT */ 
+
+.preview_btn:hover {
+    background-color: white; /* Change the background color */
+    color: black; /* Change the text color */
+    transform: translateY(-3px); /* Slightly raise the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    border: 2px solid black; /* Optionally change the border color */
+}
 
 .bio {
     height: 800px;
@@ -213,10 +229,12 @@ h4 {
     flex-direction: column;
     align-items: center;
     align-self: center;
+    color:white;
 }
 
 input {
     height: 65px;
+    color:white;
 }
 
 .contact_info_div::after {
@@ -238,6 +256,7 @@ input {
     width: 500px;
     height: auto;
     padding: 4px;
+
 }
 
 
@@ -252,6 +271,7 @@ input,
 textarea {
     background-color: rgb(58, 56, 56);
     border: none;
+    color:white;
 
 }
 
@@ -272,7 +292,23 @@ a {
     width: 125px;
     align-self: center;
     height: 35px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Additional styling for aesthetics */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+.submit_btn:hover {
+    background-color: white; /* Change the background color */
+    color: black; /* Change the text color */
+    transform: translateY(-3px); /* Slightly raise the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+    border: 2px solid black; /* Optionally change the border color */
 }
 
 .micro-footer {
@@ -371,4 +407,36 @@ a {
 .message.error {
   background-color: #F44336;
   color: white;
+}
+
+.popup-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 90%;
+}
+
+.close-btn {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+} 
+
+.msg {
+    color:white;
 }
