@@ -124,12 +124,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <div class="email_div">
         <div class="inputs">
-          <input type="text" placeholder="Your Email">
-          <input type="text" placeholder="Your Name">
-          <textarea placeholder="type your message here."></textarea>
+
+          <form method="POST">
+          {% csrf_token %} 
+          {{ msg_form }}
         </div>
         
         <button class="submit_btn">Submit</button>
+      </form>
 
         <div class="micro-footer">
           <a class="link" href="">FAQ</a>
