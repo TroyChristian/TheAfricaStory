@@ -7,6 +7,10 @@ from django.shortcuts import render, redirect
 from django.http import FileResponse, HttpResponse
 from django.contrib import messages 
 
+from .forms import MessageForm
+
+#This app 
+from .forms import MessageForm
 
 #Python 
 
@@ -18,9 +22,21 @@ import stripe
 
 # Create your views here.
 def index(request, payment_complete=False):
-	payment_complete = request.session.get('payment_complete')
-	context = {'payment_complete':payment_complete}
-	return render(request, "core/index.html", context) 
+	if request.method == "GET":
+		payment_complete = request.session.get('payment_complete')
+		msg_form = MessageForm()
+		context = {'payment_complete':payment_complete, 'msg_form':msg_form}
+		return render(request, "core/index.html", context) 
+	if request.method == "POST":
+		msg_form = MessageForm(request.POST or None)
+		if msg_form.is_valid():
+			msg_form.save() #Save the model form, create the message
+			messages.success(request, "Your message has been submitted!")
+			return redirect("index") 
+		else:
+			messages.warning(request, "Invalid Field - your message was not submitted.")
+			return redirect("index")
+
 
 
 
