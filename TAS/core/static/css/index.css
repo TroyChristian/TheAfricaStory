@@ -44,6 +44,11 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+} 
+
+.flavor_text>p {
+    font-family: 'Cinzel', serif;
+    font-weight: 400; /* Regular weight for the text */
 }
 
 
@@ -140,6 +145,16 @@ body {
     align-items: center;
     width: 65%;
 
+} 
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700; /* Makes the title bolder */
+}
+
+.text_con p {
+    font-family: 'Merriweather', serif;
+    font-weight: 400; /* Regular weight for paragraph text */
 }
 
 .author_pic {
