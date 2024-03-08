@@ -77,4 +77,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const footerLinks = document.querySelectorAll('.micro-footer .link');
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default anchor behavior
+            const popupContainer = document.getElementById('popupContainer');
+            const popupBody = document.getElementById('popupBody');
+            popupBody.innerHTML = `<h2>${this.textContent}</h2><p>Content for ${this.textContent}...</p>`; // Example content
+            popupContainer.style.display = 'flex'; // Show the popup
+        });
+    });
+});
 
+function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+}
+
+const popupContent = {
+    "FAQ": "<h2>FAQ</h2><h3>Who is the intended audience for this book?</h3><p>This book is young adult non-fiction intended for readers 13 years old and up.</p>",
+    "Downloads & Refunds": "<h2>Downloads & Refunds</h2><p>Your download should complete automatically after a succesful payment. If you encounter an issue please email us at ReadTheAfricaStory@gmail.com. All sales are final.</p>",
+    "File Type Advice": "<h2>File Type Advice</h2><p>The PDF file type is widely compatible with all systems. If you are using an Apple device EPUB is an excellent choice, and if you are using a kindle you should select the AZW3 checkout button for the best experience.</p>",
+    "Payment Methods": "<h2>Payment Methods</h2><p>All payments are processed through Stripe, an industry leader for online payments. We do not store or recieve any of your financial details.</p>"
+};
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const footerLinks = document.querySelectorAll('.micro-footer .link');
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default anchor behavior
+            const popupContainer = document.getElementById('popupContainer');
+            const popupBody = document.getElementById('popupBody');
+            // Use the link text to determine which content to display
+            const linkText = this.textContent.trim(); // Trim to ensure no extra whitespace
+            const content = popupContent[linkText] || "Content not found."; // Fallback content
+            popupBody.innerHTML = content; // Set the content
+            popupContainer.style.display = 'flex'; // Show the popup
+        });
+    });
+});
+
+function closePopup() {
+    document.getElementById('popupContainer').style.display = 'none';
+}
