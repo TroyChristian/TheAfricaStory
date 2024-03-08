@@ -140,6 +140,16 @@ body {
     align-items: center;
     width: 65%;
 
+} 
+
+.text_con h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700; /* Makes the title bolder */
+}
+
+.text_con p {
+    font-family: 'Cinzel', serif;
+    font-weight: 400; /* Regular weight for paragraph text */
 }
 
 .author_pic {
