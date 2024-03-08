@@ -33,7 +33,17 @@
     {% endif %}
           <button class="preview_btn" onclick="downloadPreview()">READ PREVIEW</a></button>
 
-         <button> <a href="https://store.bookbaby.com/book/the-africa-story" target="_blank" >BUY NOW</a></button>
+         <button class="preview_btn" id="openLinkBtn">Buy The Africa Story</button>
+         <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var button = document.getElementById('openLinkBtn');
+    button.onclick = function() {
+        window.open('https://store.bookbaby.com/book/the-africa-story', '_blank');
+    };
+});
+</script>
+
+
 
          </div>
 
@@ -100,23 +110,23 @@
     <div class="contact">
       <div class="container">
         <h4>Contact us for media appearences, product endorsements or book signings:</h4>
+        <p class="msg">email:ReadTheAfricaStory@gmail.com</p>
       <div class="contact_info_div">
         <div class="phone">
-          <p>Tel: 123-456-7890</p>
-          <p>email:ReadTheAfricaStory@gmail.com</p>
+
+
         </div>
 
         <div class="address">
-          <p>1234 Tall trees ST</p>
-          <p>Tampa Florida 33874</p>
+
         </div>
       </div>
 
       <div class="email_div">
         <div class="inputs">
-          <input type="text" placeholder="Email">
+          <input type="text" placeholder="Your Email">
           <input type="text" placeholder="Your Name">
-          <textarea placeholder="type your email here."></textarea>
+          <textarea placeholder="type your message here."></textarea>
         </div>
         
         <button class="submit_btn">Submit</button>
