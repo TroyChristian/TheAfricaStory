@@ -32,7 +32,7 @@
          <div class="flavor_text">
           <p>This isn't just based on a true story. It is a true story.</p>
     {% if payment_complete %}
-  <button onclick="downloadEbook()">Download eBook</button>
+  <button class="preview_btn" onclick="downloadEbook()">Download eBook</button>
     {% endif %}
           <button class="preview_btn" onclick="downloadPreview()">READ PREVIEW</a></button>
 
@@ -73,33 +73,39 @@ document.addEventListener('DOMContentLoaded', function() {
       <h2>Buy The E-Book (Save over 35% and read instantly!)</h2>
       <div class="links">
 
- <script async
+<!-- live pdf stripe buy button -->
+<script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
-  buy-button-id="buy_btn_1OqiqbDDOxcvEJL1syxulXcW"
-  publishable-key="pk_test_51OqgatDDOxcvEJL1SMlPBBeEgQ5eLRia0FjcyN9Q0zKcUlYCpQ7NLKabCXqFl9rWtmQMBGEVKvZBhAxdRJYnh7Oc00liA9uG4H"
+  buy-button-id="buy_btn_1OtHcADDOxcvEJL1VzgPySuS"
+  publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
 >
 </stripe-buy-button>
 
+
+<!-- live e-pub stripe buy button -->
 <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
-  buy-button-id="buy_btn_1OrY5BDDOxcvEJL1rBByt4rr"
-  publishable-key="pk_test_51OqgatDDOxcvEJL1SMlPBBeEgQ5eLRia0FjcyN9Q0zKcUlYCpQ7NLKabCXqFl9rWtmQMBGEVKvZBhAxdRJYnh7Oc00liA9uG4H"
+  buy-button-id="buy_btn_1OtHc7DDOxcvEJL1KDgP3fMb"
+  publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
 >
 </stripe-buy-button> 
 
+
+<!-- live AZW3 buy button -->
+
 <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
-  buy-button-id="buy_btn_1OrYwlDDOxcvEJL1hHHJGIBM"
-  publishable-key="pk_test_51OqgatDDOxcvEJL1SMlPBBeEgQ5eLRia0FjcyN9Q0zKcUlYCpQ7NLKabCXqFl9rWtmQMBGEVKvZBhAxdRJYnh7Oc00liA9uG4H"
+  buy-button-id="buy_btn_1OtHc2DDOxcvEJL1Iq9ejjRM"
+  publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
 >
 </stripe-buy-button>
 
