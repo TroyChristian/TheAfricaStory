@@ -406,22 +406,22 @@ a {
 }
 
 .message.success {
-  background-color: #4CAF50;
+  background-color: #355E3B;
   color: white;
 }
 
 .message.info {
-  background-color: #2196F3;
+  background-color: #FFDB58;
   color: white;
 }
 
 .message.warning {
-  background-color: #FF9800;
+  background-color: #FFDB58;
   color: white;
 }
 
 .message.error {
-  background-color: #F44336;
+  background-color: #DC143C;
   color: white;
 }
 
