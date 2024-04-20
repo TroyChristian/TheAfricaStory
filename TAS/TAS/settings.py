@@ -15,7 +15,7 @@ from pathlib import Path
 
 env = environ.Env()
 # Read .env file
-environ.Env.read_env("/home/nkisi/Desktop/TheAfricaStory/TAS/live_tas_secrets.env")
+environ.Env.read_env("C:/Users/Core/Desktop/live_tas/TheAfricaStory/TAS/test_tas_secrets.env")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 

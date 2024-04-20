@@ -124,3 +124,14 @@ function closePopup() {
 
 
 
+// The code below is what shows when a screen is to small
+function checkScreenSize() {
+    if (window.innerWidth <= 800) {
+        document.getElementById('desktopOnlyAlert').style.display = 'block';
+    } else {
+        document.getElementById('desktopOnlyAlert').style.display = 'none';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", checkScreenSize);
+window.addEventListener("resize", checkScreenSize);
