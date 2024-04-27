@@ -24,10 +24,11 @@
 
       the third and final row will be a contact screen section--->
 
-      <div id="desktopOnlyAlert">
+      <!-- <div id="desktopOnlyAlert">
         <p>Please view this website on a desktop/laptop computer for the best experience.</p>
         <img class="small_img" src="{% static 'photos/Front.png'%}" alt="">
-      </div>
+      </div> -->
+
       <!---this div is a placeholder while work is done to make this website mobile firendly--->
 
     <div class="content">
@@ -75,46 +76,41 @@
     <div class="ebook_download">
       <h2>Buy The E-Book (Save over 35% and read instantly!)</h2>
       <div class="links">
+        <!-- live pdf stripe buy button -->
+        <script async
+          src="https://js.stripe.com/v3/buy-button.js">
+        </script>
 
-<!-- live pdf stripe buy button -->
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1OtHcADDOxcvEJL1VzgPySuS"
-  publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
->
-</stripe-buy-button>
-
-
-<!-- live e-pub stripe buy button -->
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1OtHc7DDOxcvEJL1KDgP3fMb"
-  publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
->
-</stripe-buy-button> 
+        <stripe-buy-button
+          buy-button-id="buy_btn_1OtHcADDOxcvEJL1VzgPySuS"
+          publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
+        >
+        </stripe-buy-button>
 
 
-<!-- live AZW3 buy button -->
+        <!-- live e-pub stripe buy button -->
+        <script async
+          src="https://js.stripe.com/v3/buy-button.js">
+        </script>
 
-<script async
-  src="https://js.stripe.com/v3/buy-button.js">
-</script>
-
-<stripe-buy-button
-  buy-button-id="buy_btn_1OtHc2DDOxcvEJL1Iq9ejjRM"
-  publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
->
-</stripe-buy-button>
-
+        <stripe-buy-button
+          buy-button-id="buy_btn_1OtHc7DDOxcvEJL1KDgP3fMb"
+          publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
+        >
+        </stripe-buy-button> 
 
 
-       
+        <!-- live AZW3 buy button -->
+
+        <script async
+          src="https://js.stripe.com/v3/buy-button.js">
+        </script>
+
+        <stripe-buy-button
+          buy-button-id="buy_btn_1OtHc2DDOxcvEJL1Iq9ejjRM"
+          publishable-key="pk_live_51OqgatDDOxcvEJL1yWEIIub5u5tMa3PcyuQ11Wp9Sqyj73vNfp5ndZy5KeLWibjOtnQtez7sfXFaUKVBhfbNmMg200waGBoXzn"
+        >
+        </stripe-buy-button>
       </div>
       
     </div>
@@ -135,12 +131,13 @@
       </div>
 
       <div class="email_div">
-        <div class="inputs">
+       
 
           <form method="POST">
-          {% csrf_token %} 
-          {{ msg_form }}
-        </div>
+           <div class="inputs">
+            {% csrf_token %} 
+            {{ msg_form }}
+           </div>
         
           <button class="submit_btn">Submit</button>
         </form>
