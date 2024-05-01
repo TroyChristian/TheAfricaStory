@@ -1,5 +1,5 @@
-## The Africa Story
-### Troy Christian & Tyler Christian are entreprenurial Software Engineers currently supporting technical projects for Marshall Scribes Inc. 
+### The Africa Story
+#Troy Christian & Tyler Christian are entreprenurial Software Engineers currently supporting technical projects for Marshall Scribes Inc. 
 
 **Tyler Christian** is the **FrontEnd Engineer** for this project where he displays knowledge of Grid Positioning, Color Theory, Responsive Design, and Javascript to create an appealing theme to drive sales and  promote our brand. 
 
